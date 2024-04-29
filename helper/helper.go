@@ -13,8 +13,6 @@ func DebugCWD() {
 		log.Fatal(err)
 	}
 	fmt.Println("Current Working Directory: ", cwd)
-	files, err := ioutil.ReadDir(".")
-	for _, file := range files {
-		fmt.Println(file.Name())
-	}
+	ioutil.ReadFile("helper/testdata/must-gather.sample/namespaces/openshift-etcd.yaml")
+
 }
